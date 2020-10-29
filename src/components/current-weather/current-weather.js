@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
+import WeatherByDay from "../weather-by-day/weather-by-day";
 import CurrentWeatherByHour from "./current-weather-by-hour";
 
 import "./current-weather.scss";
 
 export const CurrentWeather = () => {
   const apiUrl =
-    "http://api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=Rome&days=1";
+    "http://api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=Sofia&days=5";
 
   const [weather, setWeather] = useState(null);
 
@@ -43,6 +44,7 @@ export const CurrentWeather = () => {
             </div>
           </div>
         </div>
+        <WeatherByDay forecastDays={weather.forecast.forecastday} />
         <CurrentWeatherByHour forecastHours={weather.forecast} />
       </div>
       )
