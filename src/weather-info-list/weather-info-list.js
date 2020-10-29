@@ -18,12 +18,11 @@ export const WeatherInfoList = () => {
 
   return (
     <div>
-      <p>list</p>{" "}
       <div className="container">
         <div className="row">
           {state &&
             state.forecast.forecastday.map((element) => (
-              <div className="col-md-4">
+              <div className="col-md-4" key={element.date}>
                 <WeatherInfoTile item={element} />
               </div>
             ))}
