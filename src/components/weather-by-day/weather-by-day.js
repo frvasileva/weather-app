@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import WeatherByDayDetails from "./weather-by-day-details";
 
 import "./weather-by-day.scss";

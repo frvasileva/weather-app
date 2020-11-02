@@ -1,15 +1,22 @@
 import React, { useState } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import CurrentWeather from "../current-weather/current-weather";
 import "./search-by-location.scss";
 
+
 export const SearchByLocation = () => {
-  const [location, setLocation] = useState("Plovdiv");
-  const [location2, setLocation2] = useState("Plovdiv");
+  const locationBrowser = useLocation();
+  const history = useHistory();
+
+  const searchParams = new URLSearchParams(locationBrowser.search);
+  var searchTerm = searchParams.get("term") ?? "";
+
+  const [location, setLocation] = useState(searchTerm);
   const [isFormValid, setFormIsValid] = useState(true);
 
   const changeLocation = (e) => {
     setLocation(e.target.value);
-    if (e.target.value !== undefined && e.target.value.trim() != "")
+    if (e.target.value !== undefined && e.target.value.trim() !== "")
       setFormIsValid(true);
   };
 
@@ -19,9 +26,8 @@ export const SearchByLocation = () => {
       setFormIsValid(false);
     } else {
       setFormIsValid(true);
-      setLocation2(location);
+      history.push(`?term=${location}`);
     }
-    console.log(">>>>>> form submitted");
   };
 
   console.log(location);
@@ -30,7 +36,7 @@ export const SearchByLocation = () => {
       <div className="search-by-location-wrapper">
         <form onSubmit={searchByLocation}>
           <div className="form-row">
-            <div className="col-9">
+            <div className="col-8">
               <input
                 type="text"
                 className="form-control form-control-lg"
@@ -40,7 +46,7 @@ export const SearchByLocation = () => {
               />
               {!isFormValid && <span>Choose location</span>}
             </div>
-            <div className="col-3">
+            <div className="col-4">
               <button type="submit" className="btn btn-light btn-block btn-lg">
                 Seach
               </button>
@@ -48,7 +54,7 @@ export const SearchByLocation = () => {
           </div>
         </form>
       </div>
-      <CurrentWeather location={location2} />
+      <CurrentWeather />
     </div>
   );
 };

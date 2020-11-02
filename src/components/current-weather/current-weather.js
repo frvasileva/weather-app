@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 import WeatherByDay from "../weather-by-day/weather-by-day";
 import CurrentWeatherByHour from "./current-weather-by-hour";
+import { useLocation } from "react-router-dom";
 
 import "./current-weather.scss";
 
 export const CurrentWeather = (props) => {
-  var term = props.location || "Pernik";
-  const [searchTerm, setSearchTerm] = useState(term);
-
+  const locationBrowser = useLocation();
+  const searchParams = new URLSearchParams(locationBrowser.search);
+  var searchTermFromparam = searchParams.get("term") ?? "";
+  
   const apiUrl =
     "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
-    term +
+    searchTermFromparam +
     "&days=5";
 
   const [weather, setWeather] = useState(null);
