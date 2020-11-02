@@ -14,8 +14,6 @@ export const WeatherInfoList = () => {
       });
   }, []);
 
-  console.log("state", state);
-
   return (
     <div>
       <div className="container">

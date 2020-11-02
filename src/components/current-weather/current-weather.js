@@ -4,9 +4,14 @@ import CurrentWeatherByHour from "./current-weather-by-hour";
 
 import "./current-weather.scss";
 
-export const CurrentWeather = () => {
+export const CurrentWeather = (props) => {
+  var term = props.location || "Pernik";
+  const [searchTerm, setSearchTerm] = useState(term);
+
   const apiUrl =
-    "http://api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=Sofia&days=5";
+    "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
+    term +
+    "&days=5";
 
   const [weather, setWeather] = useState(null);
 
@@ -16,7 +21,7 @@ export const CurrentWeather = () => {
       .then((data) => {
         setWeather(data);
       });
-  }, []);
+  }, [apiUrl]);
 
   if (!weather) return <div>Loading ...</div>;
 

@@ -1,4 +1,11 @@
 .app-wrapper{
-    background-color: #6b6be4;
-    padding: 60px 0;
+    padding: 30px 0;
+
+    &.night{
+        background-color: #3c3c6d;
+    }
+
+    &.day{
+        background-color: #f1be27;
+    }
 }

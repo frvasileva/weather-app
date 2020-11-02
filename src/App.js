@@ -1,15 +1,18 @@
 import "./App.scss";
-import CurrentWeather from "./components/current-weather/current-weather";
-import WeatherByDay from "./components/weather-by-day/weather-by-day";
-import WeatherInfoList from "./weather-info-list/weather-info-list";
+
+import SearchByLocation from "./components/search-location/search-by-location";
 
 function App() {
   return (
-    <div className="app-wrapper">
+    <div className="app-wrapper day">
       <header className="App-header"></header>
-      <CurrentWeather />
-      <WeatherByDay />
-      <WeatherInfoList />
+      <div className="container">
+        <div className="row">
+          <div className="col">
+            <SearchByLocation />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -21,4 +21,22 @@
     font-size: 20px;
     color: gray;
     cursor: pointer;
+    float: right;
+}
+
+@media screen and (max-width: 700px) {
+
+    .day-of-week,
+    .daily-temperatures {
+        font-size: 14px;
+    }
+
+    .expander-wrapper {
+        margin-top: 8px;
+        margin-left: -10px;
+    }
+
+    .small-icon {
+        margin: 0px auto 0 auto;
+    }
 }
