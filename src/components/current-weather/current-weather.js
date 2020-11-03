@@ -28,7 +28,14 @@ export const CurrentWeather = (props) => {
       });
   }, [apiUrl]);
 
-  if (typeof weather === "undefined") return <div>No such location... </div>;
+  if (typeof weather === "undefined")
+    return (
+      <div>
+        <div class="alert alert-secondary" role="alert">
+          No such location!
+        </div>
+      </div>
+    );
   if (!weather) return <div>Loading ...</div>;
 
   return (
