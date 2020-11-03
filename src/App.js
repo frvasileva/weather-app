@@ -1,10 +1,18 @@
 import { BrowserRouter } from "react-router-dom";
 
+import whatTimeOfDayIs from "./helpers/whatTimeOfDayIs";
 import SearchByLocation from "./components/search-location/search-by-location";
 
 import "./App.scss";
 
 function App() {
+  var hour = whatTimeOfDayIs();
+  var backgroundCssClass = "dawn";
+
+  if (hour.isDay()) backgroundCssClass = "day";
+  if (hour.isSusnetDusk()) backgroundCssClass = "sunset-dusk";
+  if (hour.isNight()) backgroundCssClass = "night";
+
   return (
     <BrowserRouter>
       <div className="wrapper day">
