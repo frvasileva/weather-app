@@ -1,24 +1,42 @@
 @import "./style/weather-icons/weather-icons.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap");
 
 .wrapper {
-    padding: 30px 0;
+  padding: 30px 0;
+  height: 100vh;
 
-    &.night {
-        background-color: #3c3c6d;
-    }
+  &.night {
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(bottom, #FFFFFF, #040C3E);
+    background: -moz-linear-gradient(bottom, #FFFFFF, #040C3E);
+    background: linear-gradient(to top, #FFFFFF, #040C3E);
+  }
 
-    &.day {
-        background-color: #f1be27;
-    }
+  &.day {
+    // background-image: linear-gradient(
+    //   to bottom,
+    //   #f1be27,
+    //   #ffb685,
+    //   #ffc7d5,
+    //   #ffe6ff,
+    //   #ffffff
+    // );
+    // https://mycolor.space/gradient?ori=to+bottom&hex=%23F1BE27&hex2=%23FFFFFF&sub=1
+    // https://www.css-gradient.com/
+
+    background: #fcab43;
+    background: -webkit-linear-gradient(bottom, #fcab43, #e0c676);
+    background: -moz-linear-gradient(bottom, #fcab43, #e0c676);
+    background: linear-gradient(to top, #fcab43, #e0c676);
+  }
 }
 
 .app-wrapper {
-    max-width: 600px;
-    margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /*Bootstrap overwrites*/
 .list-group-flush {
-    border-radius: 10px;
+  border-radius: 10px;
 }

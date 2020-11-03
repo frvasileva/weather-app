@@ -18,7 +18,7 @@
   text-align: right;
   display: block;
   line-height: 3;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .small-icon {
@@ -43,6 +43,11 @@
     margin-right: 10px;
     color: grey;
   }
+}
+
+.weather-by-hours {
+  margin-top: 20px;
+  border-left: 2px solid black;
 }
 
 @media screen and (max-width: 700px) {

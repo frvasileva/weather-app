@@ -10,21 +10,18 @@ export const WeatherByHours = (props) => {
       <div>
         <div className="row">
           <div className="col-6 item-wrapper">
-            <span class="wi wi-humidity" title="Humidity"></span>
+            <span className="wi wi-humidity" title="Humidity"></span>
             {element.day.avghumidity} %
           </div>
 
           <div className="col-6 item-wrapper">
-            <span class="wi wi-night-showers" title="Humidity"></span>
+            <span className="wi wi-night-showers" title="Humidity"></span>
             {element.day.daily_chance_of_rain} %
           </div>
         </div>
         <div className="row">
           <div className="col-6 item-wrapper">
-            <span
-              class="wi wi-snowflake-cold"
-              title="Humidity"
-            ></span>
+            <span className="wi wi-snowflake-cold" title="Humidity"></span>
             {element.day.daily_chance_of_snow} %
           </div>
         </div>

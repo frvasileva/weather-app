@@ -1,47 +1,47 @@
 .list-group-flush {
-    padding: 0;
+  padding: 0;
 }
 
 .main-current-weather-info {
-    text-align: center;
-    color: white;
-    padding: 25px;
-    border-radius: 15px;
-    margin: 0 auto 30px;
-    font-family: 'Noto Sans JP', sans-serif;
+  text-align: center;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 0 auto 30px;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .day .main-current-weather-info {
-    border: 1px solid #f1be27;
-    box-shadow: 0px 0px 25px 1px #ffffff;
+  border: 1px solid #f8b04c;
+  box-shadow: 0px 0px 25px 1px #ffffff;
+  background-color: #f8b04c;
 }
 
 .night .main-current-weather-info {
-    border: 1px solid #6b6be4;
-    box-shadow: 0px 0px 25px 1px #b3b3cc;
+  border: 1px solid #696e8c;
+  box-shadow: 0px 0px 25px 1px #b3b3cc;
 }
 
 .location {
-    font-size: 24px;
-    margin-bottom: 0;
-    ;
+  font-size: 24px;
+  margin-bottom: 0;
 }
 
 .temperature {
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    margin: 5px auto -10px auto;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 5px auto -10px auto;
 }
 
 .temperature-feels-like {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .weather-condition-text {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .icon {
-    float: right;
+  float: right;
 }

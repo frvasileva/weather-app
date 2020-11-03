@@ -52,9 +52,7 @@ export const CurrentWeather = (props) => {
           </div>
         </div>
         <WeatherByDay forecastDays={weather.forecast.forecastday} />
-        <CurrentWeatherByHour forecastHours={weather.forecast} />
       </div>
-      )
     </div>
   );
 };

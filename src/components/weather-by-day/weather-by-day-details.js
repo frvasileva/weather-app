@@ -45,7 +45,11 @@ export const WeatherByDayDetails = (props) => {
       </div>
       <div className="row">
         <div className="col-md">
-          <WeatherByHours isExpanded={isExpanded} element={element} />
+          <WeatherByHours
+            isExpanded={isExpanded}
+            element={element}
+            className="weather-by-hours"
+          />
         </div>
       </div>
     </div>
