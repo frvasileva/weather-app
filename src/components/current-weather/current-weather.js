@@ -9,7 +9,7 @@ export const CurrentWeather = (props) => {
   const locationBrowser = useLocation();
   const searchParams = new URLSearchParams(locationBrowser.search);
   var searchTermFromparam = searchParams.get("term") ?? "";
-  
+
   const apiUrl =
     "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
     searchTermFromparam +

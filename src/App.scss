@@ -1,4 +1,7 @@
-.app-wrapper {
+@import "./style/weather-icons/weather-icons.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&display=swap');
+
+.wrapper {
     padding: 30px 0;
 
     &.night {
@@ -8,6 +11,11 @@
     &.day {
         background-color: #f1be27;
     }
+}
+
+.app-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /*Bootstrap overwrites*/

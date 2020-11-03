@@ -21,8 +21,8 @@ export const WeatherByDayDetails = (props) => {
 
   return (
     <div>
-      <div className="row">
-        <div className="col-4 col-sm-4">
+      <div className="row weather-by-day-row" onClick={togglePanel}>
+        <div className="col-2 col-sm-4">
           <span className="day-of-week">{element.date}</span>
         </div>
         <div className="col-3 col-sm-2">
@@ -32,14 +32,14 @@ export const WeatherByDayDetails = (props) => {
             className="small-icon"
           />
         </div>
-        <div className="col-4 col-sm-3">
+        <div className="col-6 col-sm-3">
           <span className="daily-temperatures">
             {element.day.mintemp_c} / {element.day.maxtemp_c} °C
           </span>
         </div>
         <div className="col-1 col-sm-3">
           <div className="expander-wrapper">
-            <i className={isExpandedIcon} onClick={togglePanel}></i>
+            <i className={isExpandedIcon}></i>
           </div>
         </div>
       </div>

@@ -1,42 +1,62 @@
+.weather-by-day-row {
+  cursor: pointer;
+
+  &:hover .list-group-item {
+    background-color: beige;
+    border-bottom: 1px solid black;
+  }
+}
+
 .day-of-week {
-    font-size: 20px;
-    line-height: 3;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  line-height: 3;
 }
 
 .daily-temperatures {
-    font-size: 20px;
-    text-align: right;
-    display: block;
-    line-height: 3;
+  font-size: 16px;
+  text-align: right;
+  display: block;
+  line-height: 3;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .small-icon {
-    width: 40px;
-    margin: 10px auto 0 auto;
-    display: block;
+  width: 40px;
+  margin: 10px auto 0 auto;
+  display: block;
 }
 
 .expander-wrapper {
-    margin-top: 20px;
-    font-size: 20px;
-    color: gray;
-    cursor: pointer;
-    float: right;
+  margin-top: 20px;
+  font-size: 20px;
+  color: gray;
+  cursor: pointer;
+  float: right;
+}
+
+.item-wrapper {
+  margin-bottom: 15px;
+
+  span {
+    font-size: 30px;
+    margin-right: 10px;
+    color: grey;
+  }
 }
 
 @media screen and (max-width: 700px) {
+  .day-of-week,
+  .daily-temperatures {
+    font-size: 14px;
+  }
 
-    .day-of-week,
-    .daily-temperatures {
-        font-size: 14px;
-    }
+  .expander-wrapper {
+    margin-top: 8px;
+    margin-left: -10px;
+  }
 
-    .expander-wrapper {
-        margin-top: 8px;
-        margin-left: -10px;
-    }
-
-    .small-icon {
-        margin: 0px auto 0 auto;
-    }
+  .small-icon {
+    margin: 0px auto 0 auto;
+  }
 }

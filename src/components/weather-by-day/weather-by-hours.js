@@ -5,13 +5,32 @@ import "./weather-by-day.scss";
 export const WeatherByHours = (props) => {
   var element = props.element;
 
-  return (
-    <div>
-      {props.isExpanded && <p>Humidity: {element.day.avghumidity} %</p>}
-      {props.isExpanded && <p>Chance of rain: {element.day.daily_chance_of_rain} %</p>}
-      {props.isExpanded && <p>Chance of snow: {element.day.daily_chance_of_snow} %</p>}
-    </div>
-  );
+  if (props.isExpanded)
+    return (
+      <div>
+        <div className="row">
+          <div className="col-6 item-wrapper">
+            <span class="wi wi-humidity" title="Humidity"></span>
+            {element.day.avghumidity} %
+          </div>
+
+          <div className="col-6 item-wrapper">
+            <span class="wi wi-night-showers" title="Humidity"></span>
+            {element.day.daily_chance_of_rain} %
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-6 item-wrapper">
+            <span
+              class="wi wi-snowflake-cold"
+              title="Humidity"
+            ></span>
+            {element.day.daily_chance_of_snow} %
+          </div>
+        </div>
+      </div>
+    );
+  else return <div></div>;
 };
 
 export default WeatherByHours;
