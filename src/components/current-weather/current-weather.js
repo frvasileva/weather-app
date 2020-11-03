@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import WeatherByDay from "../weather-by-day/weather-by-day";
-import CurrentWeatherByHour from "./current-weather-by-hour";
 import { useLocation } from "react-router-dom";
 
 import "./current-weather.scss";
@@ -21,10 +20,15 @@ export const CurrentWeather = (props) => {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
-        setWeather(data);
+        if (data.error && data.error.code === 1006) {
+          setWeather(undefined);
+        } else {
+          setWeather(data);
+        }
       });
   }, [apiUrl]);
 
+  if (typeof weather === "undefined") return <div>No such location... </div>;
   if (!weather) return <div>Loading ...</div>;
 
   return (
