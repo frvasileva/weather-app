@@ -12,10 +12,10 @@ function App() {
   if (hour.isDay()) backgroundCssClass = "day";
   if (hour.isSusnetDusk()) backgroundCssClass = "sunset-dusk";
   if (hour.isNight()) backgroundCssClass = "night";
-
+  backgroundCssClass = "wrapper " + backgroundCssClass;
   return (
     <BrowserRouter>
-      <div className="wrapper day">
+      <div className={backgroundCssClass}>
         <header className="App-header"></header>
         <div className="container">
           <div className="app-wrapper">
