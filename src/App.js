@@ -13,6 +13,8 @@ function App() {
   if (hour.isSusnetDusk()) backgroundCssClass = "sunset-dusk";
   if (hour.isNight()) backgroundCssClass = "night";
   backgroundCssClass = "wrapper " + backgroundCssClass;
+
+  
   return (
     <BrowserRouter>
       <div className={backgroundCssClass}>
