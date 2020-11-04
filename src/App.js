@@ -23,7 +23,7 @@ function App() {
             <div className="row">
               <div className="col">
                 <SearchByLocation />
-              </div>
+                             </div>
             </div>
           </div>
         </div>

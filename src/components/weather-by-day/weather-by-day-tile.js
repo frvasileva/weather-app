@@ -2,7 +2,7 @@ import React from "react";
 
 import "./weather-by-day.scss";
 
-export const WeatherByHours = (props) => {
+export const WeatherByDayTile = (props) => {
   var element = props.element;
 
   if (props.isExpanded)
@@ -30,4 +30,4 @@ export const WeatherByHours = (props) => {
   else return <div></div>;
 };
 
-export default WeatherByHours;
+export default WeatherByDayTile;

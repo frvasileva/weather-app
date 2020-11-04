@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WeatherByHours from "./weather-by-hours";
+import WeatherByDayTile from "./weather-by-day-tile";
 
 import "./weather-by-day.scss";
 
@@ -43,9 +43,9 @@ export const WeatherByDayDetails = (props) => {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className={isExpanded ? "row expanded-row" : "row"}>
         <div className="col-md">
-          <WeatherByHours
+          <WeatherByDayTile
             isExpanded={isExpanded}
             element={element}
             className="weather-by-hours"
