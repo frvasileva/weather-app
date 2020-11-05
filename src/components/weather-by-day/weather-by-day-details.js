@@ -5,10 +5,11 @@ import "./weather-by-day.scss";
 
 export const WeatherByDayDetails = (props) => {
   var element = props.element;
+
+  console.log("element ", element.hour);
+
   const [isExpanded, setExpanded] = useState(false);
-  const [isExpandedIcon, setExpandedIcon] = useState(
-    "fas fa-chevron-circle-down"
-  );
+  const [isExpandedIcon, setExpandedIcon] = useState("fas fa-chevron-circle-down");
 
   const togglePanel = () => {
     setExpanded(!isExpanded);
