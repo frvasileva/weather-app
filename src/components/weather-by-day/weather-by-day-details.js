@@ -9,7 +9,9 @@ export const WeatherByDayDetails = (props) => {
   console.log("element ", element.hour);
 
   const [isExpanded, setExpanded] = useState(false);
-  const [isExpandedIcon, setExpandedIcon] = useState("fas fa-chevron-circle-down");
+  const [isExpandedIcon, setExpandedIcon] = useState(
+    "fas fa-chevron-circle-down"
+  );
 
   const togglePanel = () => {
     setExpanded(!isExpanded);
@@ -23,22 +25,22 @@ export const WeatherByDayDetails = (props) => {
   return (
     <div>
       <div className="row weather-by-day-row" onClick={togglePanel}>
-        <div className="col-2 col-sm-4">
+        <div className="col-md-4 col-4">
           <span className="day-of-week">{element.date}</span>
         </div>
-        <div className="col-3 col-sm-2">
+        <div className="col-md-2 col-1">
           <img
             src={element.day.condition.icon}
             alt={element.day.condition.text}
             className="small-icon"
           />
         </div>
-        <div className="col-6 col-sm-3">
+        <div className="col-md-4 col-4">
           <span className="daily-temperatures">
             {element.day.mintemp_c} / {element.day.maxtemp_c} °C
           </span>
         </div>
-        <div className="col-1 col-sm-3">
+        <div className="col-md-1 col-2">
           <div className="expander-wrapper">
             <i className={isExpandedIcon}></i>
           </div>
