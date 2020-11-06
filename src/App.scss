@@ -3,7 +3,8 @@
 
 .wrapper {
   padding: 30px 0;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 
   &.dawn {
     background-image: linear-gradient(
