@@ -17,6 +17,16 @@ export const CurrentWeather = (props) => {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
+    getWeather();
+
+    const interval = setInterval(() => {
+      getWeather();
+    }, 100000);
+
+    return () => clearInterval(interval);
+  }, [apiUrl]);
+
+  const getWeather = () => {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
@@ -26,7 +36,7 @@ export const CurrentWeather = (props) => {
           setWeather(data);
         }
       });
-  }, [apiUrl]);
+  };
 
   if (typeof weather === "undefined")
     return (
@@ -58,6 +68,9 @@ export const CurrentWeather = (props) => {
               ></img>
               <div className="weather-condition-text">
                 {weather.current.condition.text}
+              </div>
+              <div className="last-updated-info">
+               Last updated: {weather.current.last_updated}
               </div>
             </div>
           </div>

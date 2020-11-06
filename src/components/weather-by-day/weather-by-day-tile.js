@@ -5,8 +5,6 @@ import "./weather-by-day.scss";
 
 export const WeatherByDayTile = (props) => {
   var element = props.element;
-  console.log("element in by day", element);
-  console.log("element in by day", element.hour);
 
   if (props.isExpanded)
     return (
@@ -15,16 +13,19 @@ export const WeatherByDayTile = (props) => {
           <div className="col-4 item-wrapper">
             <span className="wi wi-humidity" title="Humidity"></span>
             {element.day.avghumidity} %
+            <span className="weather-label-info">Humidity</span>
           </div>
 
           <div className="col-4 item-wrapper">
-            <span className="wi wi-night-showers" title="Humidity"></span>
+            <span className="wi wi-night-showers" title="Showers"></span>
             {element.day.daily_chance_of_rain} %
+            <span className="weather-label-info">Rain</span>
           </div>
 
           <div className="col-4 item-wrapper">
-            <span className="wi wi-snowflake-cold" title="Humidity"></span>
+            <span className="wi wi-snowflake-cold" title="Snow"></span>
             {element.day.daily_chance_of_snow} %
+            <span className="weather-label-info">Snow</span>
           </div>
         </div>
         <div className="row">

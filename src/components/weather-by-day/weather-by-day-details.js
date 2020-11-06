@@ -28,7 +28,7 @@ export const WeatherByDayDetails = (props) => {
         <div className="col-md-4 col-4">
           <span className="day-of-week">{element.date}</span>
         </div>
-        <div className="col-md-2 col-1">
+        <div className="col-md-2 col-2">
           <img
             src={element.day.condition.icon}
             alt={element.day.condition.text}

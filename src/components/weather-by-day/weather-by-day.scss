@@ -53,6 +53,15 @@
   border-top: 1px solid #e4e4e4;
 }
 
+.item-wrapper {
+  text-align: center;
+}
+
+.weather-label-info {
+  display: block;
+  font-size: 12px !important;
+}
+
 @media screen and (max-width: 700px) {
   .day-of-week,
   .daily-temperatures {
@@ -66,5 +75,15 @@
 
   .small-icon {
     margin: 0px auto 0 auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .day-of-week,
+  .daily-temperatures {
+    font-size: 12px;
+  }
+
+  .item-wrapper span {
+    font-size: 20px;
   }
 }
