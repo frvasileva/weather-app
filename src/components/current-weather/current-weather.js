@@ -8,11 +8,40 @@ export const CurrentWeather = (props) => {
   const locationBrowser = useLocation();
   const searchParams = new URLSearchParams(locationBrowser.search);
   var searchTermFromparam = searchParams.get("term") ?? "";
+  var apiUrl = "";
+  if (searchTermFromparam !== "") {
+    apiUrl =
+      "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
+      searchTermFromparam +
+      "&days=5";
+  } else {
+    navigator.geolocation.getCurrentPosition(success, error, options);
+  }
 
-  const apiUrl =
-    "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
-    searchTermFromparam +
-    "&days=5";
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 5000,
+    maximumAge: 0,
+  };
+
+  function success(pos) {
+    var crd = pos.coords;
+
+    apiUrl =
+      "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
+      crd.latitude +
+      "," +
+      crd.longitude +
+      "&days=5";
+
+    console.log(apiUrl);
+  }
+
+  function error(err) {
+    console.warn(`ERROR(${err.code}): ${err.message}`);
+  }
+
+  //navigator.geolocation.getCurrentPosition(success, error, options);
 
   const [weather, setWeather] = useState(null);
 
@@ -70,7 +99,7 @@ export const CurrentWeather = (props) => {
                 {weather.current.condition.text}
               </div>
               <div className="last-updated-info">
-               Last updated: {weather.current.last_updated}
+                Last updated: {weather.current.last_updated}
               </div>
             </div>
           </div>
