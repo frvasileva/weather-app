@@ -4,11 +4,12 @@ import { useLocation } from "react-router-dom";
 
 import "./current-weather.scss";
 
-export const CurrentWeather = (props) => {
+export const CurrentWeather = () => {
   const locationBrowser = useLocation();
   const searchParams = new URLSearchParams(locationBrowser.search);
   var searchTermFromparam = searchParams.get("term") ?? "";
   var apiUrl = "";
+
   if (searchTermFromparam !== "") {
     apiUrl =
       "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
@@ -20,7 +21,7 @@ export const CurrentWeather = (props) => {
 
   var options = {
     enableHighAccuracy: true,
-    timeout: 5000,
+    timeout: 0,
     maximumAge: 0,
   };
 
@@ -32,29 +33,16 @@ export const CurrentWeather = (props) => {
       crd.latitude +
       "," +
       crd.longitude +
-      "&days=5";
-
-    console.log(apiUrl);
+      "&days=5";  
   }
 
   function error(err) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
+    console.warn(`Error(${err.code}): ${err.message}`);
   }
-
-  //navigator.geolocation.getCurrentPosition(success, error, options);
 
   const [weather, setWeather] = useState(null);
 
-  useEffect(() => {
-    getWeather();
-
-    const interval = setInterval(() => {
-      getWeather();
-    }, 100000);
-
-    return () => clearInterval(interval);
-  }, [apiUrl]);
-
+  var isFirstLoad = true;
   const getWeather = () => {
     fetch(apiUrl)
       .then((response) => response.json())
@@ -63,9 +51,21 @@ export const CurrentWeather = (props) => {
           setWeather(undefined);
         } else {
           setWeather(data);
+          isFirstLoad = false;
         }
       });
   };
+
+  var setIntervalValue = isFirstLoad ? 0 : 100000;
+  useEffect(() => {
+    getWeather();
+
+    const interval = setInterval(() => {
+      getWeather();
+    }, setIntervalValue);
+
+    return () => clearInterval(interval);
+  }, [apiUrl]);
 
   if (typeof weather === "undefined")
     return (
@@ -75,11 +75,34 @@ export const CurrentWeather = (props) => {
         </div>
       </div>
     );
+
+  const getCurrentLocation = () => {
+    navigator.geolocation.getCurrentPosition(success, error, options);
+
+    console.log("getCurrentLocation");
+  };
+
   if (!weather) return <div>Loading ...</div>;
 
   return (
     <div>
       <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="form-row">
+              <div className="col-12">
+                <button
+                  type="button"
+                  className="btn btn-light show-current-location-btn"
+                  onClick={getCurrentLocation}
+                >
+                  Show current location
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="row">
           <div className="col-md">
             <div className="main-current-weather-info">
