@@ -34,7 +34,7 @@ export const WeatherByDayDetails = (props) => {
         </div>
         <div className="col-md-4 col-4">
           <span className="daily-temperatures">
-            {element.day.mintemp_c} / {element.day.maxtemp_c} °C
+            {element.day.mintemp_c.toFixed()} / {element.day.maxtemp_c.toFixed()} °C
           </span>
         </div>
         <div className="col-md-1 col-2">

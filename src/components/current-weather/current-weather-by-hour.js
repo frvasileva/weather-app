@@ -3,7 +3,6 @@ import "./temperature-by-hours.scss";
 
 export const CurrentWeatherByHour = (props) => {
   var hours = props.hours;
-  console.log("hours in component", hours);
 
   return (
     <div>
@@ -23,7 +22,7 @@ export const CurrentWeatherByHour = (props) => {
                       />
                       <p className="condition-text-small">{element.condition.text}</p>
                       <p>
-                        <strong>{element.temp_c} °C </strong>
+                        <strong>{element.temp_c.toFixed()} °C </strong>
                       </p>
                     </div>
                   </div>
