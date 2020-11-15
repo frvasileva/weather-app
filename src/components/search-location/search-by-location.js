@@ -3,7 +3,6 @@ import { useHistory, useLocation } from "react-router-dom";
 import CurrentWeather from "../current-weather/current-weather";
 import "./search-by-location.scss";
 
-
 export const SearchByLocation = () => {
   const locationBrowser = useLocation();
   const history = useHistory();
@@ -30,7 +29,6 @@ export const SearchByLocation = () => {
     }
   };
 
-  console.log(location);
   return (
     <div>
       <div className="search-by-location-wrapper">

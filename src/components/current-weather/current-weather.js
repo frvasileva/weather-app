@@ -7,7 +7,8 @@ import "./current-weather.scss";
 export const CurrentWeather = () => {
   const locationBrowser = useLocation();
   const searchParams = new URLSearchParams(locationBrowser.search);
-  var searchTermFromparam = searchParams.get("term") ?? "";
+  var searchTermFromparam = searchParams.get("term") ?? "Sofia";
+
   var apiUrl = "";
 
   if (searchTermFromparam !== "") {
@@ -15,34 +16,10 @@ export const CurrentWeather = () => {
       "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
       searchTermFromparam +
       "&days=5";
-  } else {
-    navigator.geolocation.getCurrentPosition(success, error, options);
-  }
-
-  var options = {
-    enableHighAccuracy: true,
-    timeout: 0,
-    maximumAge: 0,
-  };
-
-  function success(pos) {
-    var crd = pos.coords;
-
-    apiUrl =
-      "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
-      crd.latitude +
-      "," +
-      crd.longitude +
-      "&days=5";  
-  }
-
-  function error(err) {
-    console.warn(`Error(${err.code}): ${err.message}`);
   }
 
   const [weather, setWeather] = useState(null);
 
-  var isFirstLoad = true;
   const getWeather = () => {
     fetch(apiUrl)
       .then((response) => response.json())
@@ -51,12 +28,11 @@ export const CurrentWeather = () => {
           setWeather(undefined);
         } else {
           setWeather(data);
-          isFirstLoad = false;
         }
       });
   };
 
-  var setIntervalValue = isFirstLoad ? 0 : 100000;
+  var setIntervalValue = 100000;
   useEffect(() => {
     getWeather();
 
@@ -76,33 +52,11 @@ export const CurrentWeather = () => {
       </div>
     );
 
-  const getCurrentLocation = () => {
-    navigator.geolocation.getCurrentPosition(success, error, options);
-
-    console.log("getCurrentLocation");
-  };
-
   if (!weather) return <div>Loading ...</div>;
 
   return (
     <div>
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="form-row">
-              <div className="col-12">
-                <button
-                  type="button"
-                  className="btn btn-light show-current-location-btn"
-                  onClick={getCurrentLocation}
-                >
-                  Show current location
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div className="row">
           <div className="col-md">
             <div className="main-current-weather-info">
