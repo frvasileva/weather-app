@@ -1,22 +1,27 @@
 var whatTimeOfDayIs = function () {
+  const DAWN_START = 6;
+  const DAY_START = 8;
+  const DAY_END = 19;
+  const NIGHT_START = 20;
+
   const isDawn = () => {
     const hours = new Date().getHours();
-    return hours >= 6 && hours < 8;
+    return hours >= DAWN_START && hours < DAY_START;
   };
 
   const isDay = () => {
     const hours = new Date().getHours();
-    return hours >= 8 && hours < 18;
+    return hours >= DAY_START && hours < DAY_END;
   };
 
   const isSusnetDusk = function () {
     const hours = new Date().getHours();
-    return hours >= 18 && hours < 20;
+    return hours >= DAY_END && hours < NIGHT_START;
   };
 
   const isNight = function () {
     const hours = new Date().getHours();
-    return (hours >= 18 && hours < 23) || (hours >= 0 && hours < 6);
+    return (hours >= DAY_END && hours < 23) || (hours >= 0 && hours < DAWN_START);
   };
 
   return { isDawn, isDay, isSusnetDusk, isNight };
