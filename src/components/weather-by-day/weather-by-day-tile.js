@@ -12,19 +12,23 @@ export const WeatherByDayTile = (props) => {
         <div className="row">
           <div className="col-4 item-wrapper">
             <span className="wi wi-humidity" title="Humidity"></span>
-            {element.day.avghumidity} %
+            <span className="item-value"> {element.day.avghumidity} %</span>
             <span className="weather-label-info">Humidity</span>
           </div>
 
           <div className="col-4 item-wrapper">
             <span className="wi wi-night-showers" title="Showers"></span>
-            {element.day.daily_chance_of_rain} %
+            <span className="item-value">
+              {element.day.daily_chance_of_rain} %
+            </span>
             <span className="weather-label-info">Rain</span>
           </div>
 
           <div className="col-4 item-wrapper">
             <span className="wi wi-snowflake-cold" title="Snow"></span>
-            {element.day.daily_chance_of_snow} %
+            <span className="item-value">
+              {element.day.daily_chance_of_snow} %
+            </span>
             <span className="weather-label-info">Snow</span>
           </div>
         </div>

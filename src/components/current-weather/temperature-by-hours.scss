@@ -14,16 +14,32 @@
   }
 
   .hour-item {
-    display: inline-block;
+    display: block;
+    width: 100%;
+    background-color: #eaeaea;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: "Noto Sans JP", sans-serif;
+
+    & p {
+      margin: 0;
+      font-size: 18px;
+    }
   }
 
   .weather-icon {
-    width: 35px;
+    width: 30px;
     display: block;
     margin: 0 auto;
   }
 
-  .condition-text-small {
+  p.condition-text-small {
     font-size: 12px;
+    line-height: 28px;
+  }
+
+  .temperature-value {
+    text-align: right;
   }
 }

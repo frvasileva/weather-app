@@ -37,9 +37,15 @@
 
 .item-wrapper {
   span {
-    font-size: 30px;
+    font-size: 20px;
     margin-right: 10px;
     color: grey;
+  }
+
+  .item-value {
+    color: #545151;
+    font-size: 22px;
+    font-weight: bold;
   }
 }
 
