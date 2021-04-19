@@ -28,7 +28,6 @@ export const CurrentWeather = () => {
           setWeather(undefined);
         } else {
           setWeather(data);
-          console.log("data", data);
         }
       });
   };

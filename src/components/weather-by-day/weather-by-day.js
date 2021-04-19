@@ -10,6 +10,7 @@ export const WeatherByDay = (props) => {
 
   return (
     <div>
+      <h2 className="tile-header">Next 3 days:</h2>
       <div className="row">
         <div className="col-md">
           <ul className="list-group-flush">
