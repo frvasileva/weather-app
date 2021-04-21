@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import WeatherByDayTile from "./weather-by-day-tile";
 
-import "./weather-by-day.scss";
-
 export const WeatherByDayDetails = (props) => {
   var element = props.element;
   const [isExpanded, setExpanded] = useState(false);
@@ -34,7 +32,8 @@ export const WeatherByDayDetails = (props) => {
         </div>
         <div className="col-md-4 col-4">
           <span className="daily-temperatures">
-            {element.day.mintemp_c.toFixed()} / {element.day.maxtemp_c.toFixed()} °C
+            {element.day.mintemp_c.toFixed()} /{" "}
+            {element.day.maxtemp_c.toFixed()} °C
           </span>
         </div>
         <div className="col-md-1 col-2">
@@ -45,6 +44,7 @@ export const WeatherByDayDetails = (props) => {
       </div>
       <div className={isExpanded ? "row expanded-row" : "row"}>
         <div className="col-md">
+          {" "}
           <WeatherByDayTile
             isExpanded={isExpanded}
             element={element}
