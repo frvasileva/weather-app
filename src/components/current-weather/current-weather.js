@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import WeatherByDay from "../weather-by-day/weather-by-day";
 import { useLocation } from "react-router-dom";
+import UsAirQualityIndexTransformer from "../../helpers/airQualityHelper";
 
 import "./current-weather.scss";
 
@@ -13,9 +14,9 @@ export const CurrentWeather = () => {
 
   if (searchTermFromparam !== "") {
     apiUrl =
-      "//api.weatherapi.com/v1/forecast.json?key=d399b4c72a3e4a0ba5b102144202710&q=" +
+      "//api.weatherapi.com/v1/forecast.json?key=a074730b7e2a496cb3c110546221301&q=" +
       searchTermFromparam +
-      "&days=5";
+      "&days=3&aqi=yes&alerts=yes";
   }
 
   const [weather, setWeather] = useState(null);
@@ -56,17 +57,16 @@ export const CurrentWeather = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="">
         <div className="row">
           <div className="col-md">
             <div className="main-current-weather-info">
               <div className="location">
                 {weather.location.name}, {weather.location.country}
               </div>
-
-              <div className="temperature"> {weather.current.temp_c} °C</div>
+              <div className="temperature"> {Math.round(weather.current.temp_c)} °C</div>
               <div className="temperature-feels-like">
-                Feels like {weather.current.feelslike_c} °C
+                Feels like {Math.round(weather.current.feelslike_c)} °C
               </div>
               <img
                 src={weather.current.condition.icon}
@@ -75,6 +75,28 @@ export const CurrentWeather = () => {
               <div className="weather-condition-text">
                 {weather.current.condition.text}
               </div>
+              <hr />
+              <div className="row">
+                <div className="col-4">
+                  <span className="label">Air Quality: </span> 
+                  <span className="value">
+                    {" "}
+                    {UsAirQualityIndexTransformer(
+                      weather.current.air_quality["us-epa-index"]
+                    )}
+                  </span>
+                </div>
+                <div className="col-4">
+                  <span className="label">Humidity: </span>
+                  <span className="value"> {weather.current.humidity}%</span>
+                </div>
+                <div className="col-4">
+                  <span className="label">Wind: </span>
+                  <span className="value">{weather.current.wind_kph} km/h</span>
+                </div>
+              </div>
+
+              <hr />
               <div className="last-updated-info">
                 Last updated: {weather.current.last_updated}
               </div>

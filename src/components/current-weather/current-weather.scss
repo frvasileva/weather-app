@@ -6,7 +6,7 @@
   text-align: center;
   color: white;
   padding: 25px;
-  border-radius: 15px;
+  border-radius: 3px;
   margin: 0 auto 30px;
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -52,4 +52,14 @@
   margin: 0px auto 40px;
   text-align: center;
   display: block;
+}
+
+.label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.value {
+  font-weight: bold;
 }
