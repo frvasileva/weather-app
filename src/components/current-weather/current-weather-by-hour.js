@@ -12,24 +12,24 @@ export const CurrentWeatherByHour = (props) => {
             {hours.map((element) => (
               <li className="hour-item" key={element.time}>
                 <div className="row">
-                  <div className="col-md-4">
+                  <div className="col-md-4 col-3">
                     <div className="item-wrapper">
                       <p> {element.time.split(" ")[1]}</p>
                     </div>
                   </div>
-                  <div className="col-md-1">
+                  <div className="col-md-1 col-1">
                     <img
                       className="icon weather-icon"
                       src={element.condition.icon}
                       alt={element.condition.text}
                     />
                   </div>
-                  <div className="col-md-3">
+                  <div className="col-md-3 col-4">
                     <p className="condition-text-small">
                       {element.condition.text}
                     </p>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-md-4 col-3">
                     <p className="temperature-value">
                       <strong>{element.temp_c.toFixed()} °C </strong>
                     </p>

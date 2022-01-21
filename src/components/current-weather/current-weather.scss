@@ -12,9 +12,9 @@
 }
 
 .day .main-current-weather-info {
-  border: 1px solid #f8b04c;
+  border: 1px solid #ffc107;
   box-shadow: 0px 0px 25px 1px #ffffff;
-  background-color: #f8b04c;
+  background-color: #ffc107;
 }
 
 .night .main-current-weather-info {
@@ -39,7 +39,7 @@
 }
 
 .weather-condition-text {
-  margin-top: 5px;
+  display: inline-block;
 }
 
 .last-updated-info {
@@ -63,3 +63,13 @@
 .value {
   font-weight: bold;
 }
+
+// .weather-icon {
+//   float: left;
+// }
+
+// @media screen and (max-width: 768px) {
+//   .weather-condition{
+//     background-color: white;
+//   }
+// }

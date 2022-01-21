@@ -12,35 +12,33 @@ import "./weather-by-day.scss";
 
 export const WeatherByDayTile = (props) => {
   var element = props.element;
-  console.log("element", element);
 
   var chartData = element.hour.map(function (item) {
     return {
-      //  x: parseInt(item.time.substr(11, 6)),
       x: item.time.substr(11, 6),
       y: item.temp_c,
-      fani: item.temp_c,
       label: item.time.substr(11, 6),
       style: { fontSize: 10 },
       rotation: 34,
       labelAnchorY: item.time.substr(11, 6),
       chance_of_rain: item.chance_of_rain,
       humidity: item.humidity,
-      icon: item.condition.icon
+      icon: item.condition.icon,
     };
   });
 
   function CustomTooltip({ payload, label, active }) {
-    console.log("payload", payload);
-    console.log("payload 2", payload.payload);
-
     if (active) {
       return (
         <div className="custom-tooltip">
           <span className="label">{label} ч. </span>
           <hr />
-          <img src={payload[0].payload.icon} alt="weather icon" className="weather-icon" />
-          <span className="value">{payload[0].value}°C </span>
+          <img
+            src={payload[0].payload.icon}
+            alt="weather icon"
+            className="weather-icon"
+          />
+          <span className="value">{Math.round(payload[0].value)}°C </span>
           <hr />
           <span className="desc">
             {payload[0].payload.chance_of_rain}% Rain

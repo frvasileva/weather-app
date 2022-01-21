@@ -8,9 +8,12 @@
 }
 
 .tile-header {
-  font-size: 19px;
+  font-size: 20px;
   color: white;
+  text-transform: uppercase;
+  font-family: "Noto Sans JP", sans-serif;
 }
+
 .day-of-week {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
@@ -18,11 +21,12 @@
 }
 
 .daily-temperatures {
-  font-size: 16px;
+  font-size: 18px;
   text-align: right;
   display: block;
   line-height: 3;
   font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
 }
 
 .small-icon {
@@ -118,7 +122,7 @@
     margin: 0px auto 0 auto;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   .day-of-week,
   .daily-temperatures {
     font-size: 12px;
@@ -126,5 +130,10 @@
 
   .item-wrapper span {
     font-size: 20px;
+  }
+
+  .item-wrapper .item-value {
+    font-size: 16px;
+    margin-top: 10px;
   }
 }

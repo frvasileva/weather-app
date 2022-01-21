@@ -7,6 +7,13 @@ export const WeatherByDayDetails = (props) => {
   const [isExpandedIcon, setExpandedIcon] = useState(
     "fas fa-chevron-circle-down"
   );
+  var date = new Date(element.date);
+  var options = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  };
+
 
   const togglePanel = () => {
     setExpanded(!isExpanded);
@@ -21,7 +28,7 @@ export const WeatherByDayDetails = (props) => {
     <div>
       <div className="row weather-by-day-row" onClick={togglePanel}>
         <div className="col-md-4 col-4">
-          <span className="day-of-week">{element.date}</span>
+          <span className="day-of-week">{date.toLocaleDateString("en-US", options)}</span>
         </div>
         <div className="col-md-2 col-2">
           <img

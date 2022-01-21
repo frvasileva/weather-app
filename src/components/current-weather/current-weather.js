@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import WeatherByDay from "../weather-by-day/weather-by-day";
 import { useLocation } from "react-router-dom";
 import UsAirQualityIndexTransformer from "../../helpers/airQualityHelper";
-
 import "./current-weather.scss";
 
 export const CurrentWeather = () => {
@@ -64,21 +63,27 @@ export const CurrentWeather = () => {
               <div className="location">
                 {weather.location.name}, {weather.location.country}
               </div>
-              <div className="temperature"> {Math.round(weather.current.temp_c)} °C</div>
+              <div className="temperature">
+                {" "}
+                {Math.round(weather.current.temp_c)} °C
+              </div>
               <div className="temperature-feels-like">
                 Feels like {Math.round(weather.current.feelslike_c)} °C
               </div>
-              <img
-                src={weather.current.condition.icon}
-                alt={weather.current.condition.text}
-              ></img>
-              <div className="weather-condition-text">
-                {weather.current.condition.text}
+              <div className="weather-condition">
+                <img
+                  src={weather.current.condition.icon}
+                  alt={weather.current.condition.text}
+                  className="weather-icon"
+                ></img>
+                <span className="weather-condition-text">
+                  {weather.current.condition.text}
+                </span>
               </div>
               <hr />
               <div className="row">
                 <div className="col-4">
-                  <span className="label">Air Quality: </span> 
+                  <span className="label">Air Quality: </span>
                   <span className="value">
                     {" "}
                     {UsAirQualityIndexTransformer(

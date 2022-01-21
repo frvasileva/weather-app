@@ -1,17 +1,16 @@
 import React from "react";
 import WeatherByDayDetails from "./weather-by-day-details";
 
-
 import "./weather-by-day.scss";
 
 export const WeatherByDay = (props) => {
   var forecast = props.forecastDays;
 
   if (!forecast) return <div>Loading ...</div>;
-  console.log("forecast", forecast);
+
   return (
     <div>
-      <h2 className="tile-header">Next 3 days:</h2>     
+      <h2 className="tile-header">Next 3 days:</h2>
 
       <div className="row">
         <div className="col-md">
