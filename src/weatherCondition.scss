@@ -1,0 +1,33 @@
+@mixin weather-background($main-color, $gradient-color) {
+  background: $main-color;
+  background: -webkit-linear-gradient(bottom, $main-color, $gradient-color);
+  background: -moz-linear-gradient(bottom, $main-color, $gradient-color);
+  background: linear-gradient(to top, $main-color, $gradient-color);
+}
+
+.sun {
+  @include weather-background(#ffc107, #ffc10994);
+}
+
+.rain {
+  @include weather-background(#5d8cd3c4, #0919ff94);
+}
+
+.wind {
+    @include weather-background(#abc1e2c4, #9195c294);
+}
+.fog {
+    @include weather-background(#b5bbc5c4, #7a7a7c94);
+}
+
+.snow {
+  @include weather-background(rgb(205, 221, 235), #8bb1ebc4);
+}
+
+.sleet {
+  @include weather-background(rgb(166, 208, 243), #8bb1ebc4);
+}
+
+.cloud {
+  @include weather-background(#5289ee94, #5d708dc4);
+}
