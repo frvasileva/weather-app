@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/weather-app/static/css/main.97023f5d.chunk.css",
-    "main.js": "/weather-app/static/js/main.8219c8f7.chunk.js",
-    "main.js.map": "/weather-app/static/js/main.8219c8f7.chunk.js.map",
-    "runtime-main.js": "/weather-app/static/js/runtime-main.0f32bc4a.js",
-    "runtime-main.js.map": "/weather-app/static/js/runtime-main.0f32bc4a.js.map",
-    "static/js/2.e3fc3853.chunk.js": "/weather-app/static/js/2.e3fc3853.chunk.js",
-    "static/js/2.e3fc3853.chunk.js.map": "/weather-app/static/js/2.e3fc3853.chunk.js.map",
-    "static/js/3.5181d096.chunk.js": "/weather-app/static/js/3.5181d096.chunk.js",
-    "static/js/3.5181d096.chunk.js.map": "/weather-app/static/js/3.5181d096.chunk.js.map",
+    "main.css": "/weather-app/static/css/main.4a1b4f1f.chunk.css",
+    "main.js": "/weather-app/static/js/main.562a8ca5.chunk.js",
+    "main.js.map": "/weather-app/static/js/main.562a8ca5.chunk.js.map",
+    "runtime-main.js": "/weather-app/static/js/runtime-main.83b26945.js",
+    "runtime-main.js.map": "/weather-app/static/js/runtime-main.83b26945.js.map",
+    "static/js/2.f886a125.chunk.js": "/weather-app/static/js/2.f886a125.chunk.js",
+    "static/js/2.f886a125.chunk.js.map": "/weather-app/static/js/2.f886a125.chunk.js.map",
+    "static/js/3.0ceaa6fb.chunk.js": "/weather-app/static/js/3.0ceaa6fb.chunk.js",
+    "static/js/3.0ceaa6fb.chunk.js.map": "/weather-app/static/js/3.0ceaa6fb.chunk.js.map",
     "index.html": "/weather-app/index.html",
-    "static/css/main.97023f5d.chunk.css.map": "/weather-app/static/css/main.97023f5d.chunk.css.map",
-    "static/js/2.e3fc3853.chunk.js.LICENSE.txt": "/weather-app/static/js/2.e3fc3853.chunk.js.LICENSE.txt",
+    "static/css/main.4a1b4f1f.chunk.css.map": "/weather-app/static/css/main.4a1b4f1f.chunk.css.map",
+    "static/js/2.f886a125.chunk.js.LICENSE.txt": "/weather-app/static/js/2.f886a125.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/weather-app/static/media/weathericons-regular-webfont.e218aee6.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.0f32bc4a.js",
-    "static/js/2.e3fc3853.chunk.js",
-    "static/css/main.97023f5d.chunk.css",
-    "static/js/main.8219c8f7.chunk.js"
+    "static/js/runtime-main.83b26945.js",
+    "static/js/2.f886a125.chunk.js",
+    "static/css/main.4a1b4f1f.chunk.css",
+    "static/js/main.562a8ca5.chunk.js"
   ]
 }
