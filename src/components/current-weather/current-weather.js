@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import WeatherByDay from "../weather-by-day/weather-by-day";
 import { useLocation } from "react-router-dom";
 import UsAirQualityIndexTransformer from "../../helpers/airQualityHelper";
 import "./current-weather.scss";
+import WeatherContext from "../../context";
+import WeatherType from "../../helpers/weatherTypes";
 
 export const CurrentWeather = () => {
   const locationBrowser = useLocation();
@@ -19,6 +21,7 @@ export const CurrentWeather = () => {
   }
 
   const [weather, setWeather] = useState(null);
+  const { setWeatherType } = useContext(WeatherContext);
 
   const getWeather = () => {
     fetch(apiUrl)
@@ -31,6 +34,8 @@ export const CurrentWeather = () => {
         }
       });
   };
+
+  setWeatherType(WeatherType(weather?.current.condition.text));
 
   var setIntervalValue = 100000;
   useEffect(() => {
