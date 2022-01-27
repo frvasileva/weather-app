@@ -43,7 +43,7 @@ export const WeatherByDayDetails = (props) => {
             {element.day.maxtemp_c.toFixed()} °C
           </span>
         </div>
-        <div className="col-md-1 col-2">
+        <div className="col-md-2 col-2">
           <div className="expander-wrapper">
             <i className={isExpandedIcon}></i>
           </div>

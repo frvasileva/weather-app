@@ -1,5 +1,7 @@
 import React from "react";
 import CurrentWeatherByHour from "../current-weather/current-weather-by-hour";
+import useWindowDimensions from "../../helpers/useWindowDimensions";
+
 import {
   LineChart,
   Line,
@@ -12,6 +14,17 @@ import "./weather-by-day.scss";
 
 export const WeatherByDayTile = (props) => {
   var element = props.element;
+
+  const { height, width } = useWindowDimensions();
+  console.log("height and width", height + " " + width);
+  var chartWidth = 550;
+  if (width < 800 && width > 600) {
+    chartWidth = width - 300;
+  }
+  if (width <= 600) {
+    chartWidth = width - 100;
+  }
+  console.log("chartWidth", chartWidth);
 
   var chartData = element.hour.map(function (item) {
     return {
@@ -82,7 +95,7 @@ export const WeatherByDayTile = (props) => {
           <div className="col-md">
             <br></br>
             <br></br>
-            <LineChart width={500} height={300} data={chartData}>
+            <LineChart width={chartWidth} height={300} data={chartData}>
               <Line type="monotone" dataKey="y" stroke="#8884d8" />
               <CartesianGrid stroke="#ccc" strokeDasharray="3 3" />
               <XAxis dataKey="x" />

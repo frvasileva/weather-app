@@ -17,14 +17,14 @@ export const CurrentWeatherByHour = (props) => {
                       <p> {element.time.split(" ")[1]}</p>
                     </div>
                   </div>
-                  <div className="col-md-1 col-1">
+                  <div className="col-md-1 col-1 weather-icon-cell-wrapper">
                     <img
                       className="icon weather-icon"
                       src={element.condition.icon}
                       alt={element.condition.text}
                     />
                   </div>
-                  <div className="col-md-3 col-4">
+                  <div className="col-md-3 col-4 weather-icon-cell-wrapper">
                     <p className="condition-text-small">
                       {element.condition.text}
                     </p>

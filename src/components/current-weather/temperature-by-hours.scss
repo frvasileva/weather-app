@@ -45,12 +45,23 @@
 }
 
 @media screen and (max-width: 768px) {
+  .weather-icon-cell-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
   .temperature-by-hour-list-wrapper .item-wrapper {
     text-align: left;
     width: auto;
   }
 
   .temperature-by-hour-list-wrapper .hour-item p {
-    font-size: 16px;
+    font-size: 14spx;
+    white-space: normal;
+  }
+
+  .temperature-by-hour-list-wrapper p.condition-text-small {
+    line-height: 16px;
   }
 }
