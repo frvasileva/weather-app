@@ -1,5 +1,5 @@
 var WeatherType = function (weather) {
-  console.log("weather", weather);
+
   if (!weather) {
     return "n/a";
   }

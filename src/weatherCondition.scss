@@ -5,29 +5,41 @@
   background: linear-gradient(to top, $main-color, $gradient-color);
 }
 
+@mixin hour-item($background-color) {
+  .temperature-by-hour-list-wrapper .hour-item {
+    background-color: $background-color;
+  }
+}
 .sun {
   @include weather-background(#ffc107, #ffc10994);
+  @include hour-item(#ffc107);
 }
 
 .rain {
   @include weather-background(#5d8cd3c4, #0919ff94);
+  @include hour-item(#5d8cd3c4);
 }
 
 .wind {
-    @include weather-background(#abc1e2c4, #9195c294);
+  @include weather-background(#abc1e2c4, #9195c294);
+  @include hour-item(#abc1e2c4);
 }
 .fog {
-    @include weather-background(#b5bbc5c4, #7a7a7c94);
+  @include weather-background(#b5bbc5c4, #7a7a7c94);
+  @include hour-item(#8db7f7c4);
 }
 
 .snow {
-  @include weather-background(rgb(205, 221, 235), #8bb1ebc4);
+  @include weather-background(#cdddeb, #8bb1ebc4);
+  @include hour-item(#8bb1ebc4);
 }
 
 .sleet {
   @include weather-background(rgb(166, 208, 243), #8bb1ebc4);
+  @include hour-item(#8bb1ebc4);
 }
 
 .cloud {
   @include weather-background(#5289ee94, #5d708dc4);
+  @include hour-item(#5289ee94);
 }
