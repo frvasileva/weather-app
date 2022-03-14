@@ -6,8 +6,10 @@ What problem does it solve?
 What did you learn?
 What makes your project stand out?
 If your project has a lot of features, consider adding a "Features" section and listing them here. 
+-->
 
-I've build this project to practice my React skills.
+I've build this project to practice my React skills - using API to read data, using React Context to update UI depending on the weather condition etc.
+
 You can find the current weather conditions for a specific location, see what the weather will be in 3 days period and see the weather details per day.
 
 Developing it helps me to practise my brandly new learned react scripts
@@ -16,4 +18,4 @@ Developing it helps me to practise my brandly new learned react scripts
   
 <img src="https://lh3.googleusercontent.com/sRyuEKF0FEXj2NvRxMjb22DPUcVQE-PwCQXyVcdlFIYO3GtyjhZ-HfQRDMwPOVL6zaE6DARqSOopB0YZCqUVEbU6zVavSjcGmxP13b6w7tbCX9Ho7JbzpsHRvtZtNyRtw4VmDl-aLAfl8DtKOEXn_CbkuzNCd87P7hakyuTJ3j0gk84fsZMCcJJi2Oj99Uwz5fI9etnk5_3go_fGCbJe80CHvD7fmu4eK7zR5LRUNaddDk6FJMxsl83zXspAMuNuz4fn7K8kAq0tJCUm45ZwvPj8blbF3gxxHoTuaxUfaiMO03ZK3bat7YJnuWUzBWyKLUc_TE15l48Da7a2tUv8f5xXA8jK7pHWuWNezKnqlvBI5Bbj1BX9hnyWolsThMpguUZGwp3azk0RHc-25UwXU5DibK3i26vTyakR7DQbzmn7zGvqnMrH5PVSk1IVdk4ZBP5sUzTpn2aZYMk-8RRoDbyf-uUSQH-cRzU-ja6UnHqPFEtYyk8ojoe2KR0E9Vfh7ID-0gopl3DdLAGwUnwdcvSjdOuq67xzi6g9yUKLsoUFSvwGdU709URZ1ugLYxSghvtkWTCu0InVGxze149Ea52L57o-U2NbIor7O2owqmMbS12hHGrY7ilzGLr8jdMoCMZ-KsUA2iRZHb6LO8h6sJlCYzSu8Jr1kbrdJWU-WD9tQlsR2pARdy5E7UGVm3LO9sqx0Q4gRS6lPVhxjFV-k9eh=w380-h666-no?authuser=0" alt="Youtube Badge"/>
 
--->
+
