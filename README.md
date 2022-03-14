@@ -1,4 +1,4 @@
-Checkout project here - https://frvasileva.github.io/weather-app
+Checkout Weather app project here - https://frvasileva.github.io/weather-app
 
 <!-- What was your motivation?
 Why did you build this project?
@@ -8,11 +8,11 @@ What makes your project stand out?
 If your project has a lot of features, consider adding a "Features" section and listing them here. 
 -->
 
-I've build this project to practice my React skills - using API to read data, using React Context to update UI depending on the weather condition etc.
+I've build this project to practice my React skills - using API to read data, using React Context to update UI depending on the weather conditions, etc.
 
 You can find the current weather conditions for a specific location, see what the weather will be in 3 days period and see the weather details per day.
 
-Developing it helps me to practise my brandly new learned react scripts
+Developing it helps me to practise my brandly new learned react scripts skills.
 
 <img src="https://lh3.googleusercontent.com/quGID8GpaCPgX8LMdT4f4FQPWEsq3OQKooPajwqkEOncPImAMSIGqGmYbZqEEPTxNhAxkCrxSXJ8Fjmf4l72PA5EFNhbyq7iUwkcU_jfzuYfTjJEyOTxfWsrR3VXE3hHH8RgSAGDMDIT7qIq-5BQ1kRM8SNdUmVC0AVVkdDG1MEG10OxBl5BXdQo0LSMDEmfSdA5UkOcIEXJN5e1ZZlJUz5oAsmKnmWg8Qg0jKQw5COHVy5C9lTvm-PAuqSqkwjoOiW1d7jMrlH6iwWAaFJ1Sla6fUjhwih54JfhA-OzHeR-TZKdUcX05RxyoqHccttYIycXSanC5c_6Flclp1hyk4bEWHfoW7r7LPxTzEEJ3UpWyxwCGgzayDAtDyKfOcsD_YG37A8V1QOd2IElBLv31wlTqydx4m4eTG8QCm57TiMWNblc9-W1m6lc6HNGfWBIMaOqbmCPWLiyHI94NDKs4gyxzgpjvyhYSl9b2LfWYbu8sDvG3tmX_X00gGoYU_hy5bHVzTpsHlDDmMmkW7KPF5_vl2NjucYlglGjNNW1aF6IeUUJKnQfVg_60bjV_mEWRfTjqzskcAdy88RH26jfjddHnZfn38pYiDutp0r2uK_HgFtLOkRKDmPSvSpEB7tCY4qMMK7Cb4qFlSmZnUm3ZMd5y1rthKJVsaiqpmnmDqa08fam5xiI49ZdrxZ1f-jNrnA27Xwz52HpvPpivSvlLPba=w380-h667-no?authuser=0" alt="Youtube Badge"/>
   
