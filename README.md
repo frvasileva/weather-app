@@ -1,72 +1,19 @@
-#Checkout project here - https://frvasileva.github.io/weather-app/?term=Sofia
+Checkout project here - https://frvasileva.github.io/weather-app
 
-# Getting Started with Create React App
+<!-- What was your motivation?
+Why did you build this project?
+What problem does it solve?
+What did you learn?
+What makes your project stand out?
+If your project has a lot of features, consider adding a "Features" section and listing them here. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I've build this project to practice my React skills.
+You can find the current weather conditions for a specific location, see what the weather will be in 3 days period and see the weather details per day.
 
-## Available Scripts
+Developing it helps me to practise my brandly new learned react scripts
 
-In the project directory, you can run:
+<img src="https://lh3.googleusercontent.com/quGID8GpaCPgX8LMdT4f4FQPWEsq3OQKooPajwqkEOncPImAMSIGqGmYbZqEEPTxNhAxkCrxSXJ8Fjmf4l72PA5EFNhbyq7iUwkcU_jfzuYfTjJEyOTxfWsrR3VXE3hHH8RgSAGDMDIT7qIq-5BQ1kRM8SNdUmVC0AVVkdDG1MEG10OxBl5BXdQo0LSMDEmfSdA5UkOcIEXJN5e1ZZlJUz5oAsmKnmWg8Qg0jKQw5COHVy5C9lTvm-PAuqSqkwjoOiW1d7jMrlH6iwWAaFJ1Sla6fUjhwih54JfhA-OzHeR-TZKdUcX05RxyoqHccttYIycXSanC5c_6Flclp1hyk4bEWHfoW7r7LPxTzEEJ3UpWyxwCGgzayDAtDyKfOcsD_YG37A8V1QOd2IElBLv31wlTqydx4m4eTG8QCm57TiMWNblc9-W1m6lc6HNGfWBIMaOqbmCPWLiyHI94NDKs4gyxzgpjvyhYSl9b2LfWYbu8sDvG3tmX_X00gGoYU_hy5bHVzTpsHlDDmMmkW7KPF5_vl2NjucYlglGjNNW1aF6IeUUJKnQfVg_60bjV_mEWRfTjqzskcAdy88RH26jfjddHnZfn38pYiDutp0r2uK_HgFtLOkRKDmPSvSpEB7tCY4qMMK7Cb4qFlSmZnUm3ZMd5y1rthKJVsaiqpmnmDqa08fam5xiI49ZdrxZ1f-jNrnA27Xwz52HpvPpivSvlLPba=w380-h667-no?authuser=0" alt="Youtube Badge"/>
+  
+<img src="https://lh3.googleusercontent.com/sRyuEKF0FEXj2NvRxMjb22DPUcVQE-PwCQXyVcdlFIYO3GtyjhZ-HfQRDMwPOVL6zaE6DARqSOopB0YZCqUVEbU6zVavSjcGmxP13b6w7tbCX9Ho7JbzpsHRvtZtNyRtw4VmDl-aLAfl8DtKOEXn_CbkuzNCd87P7hakyuTJ3j0gk84fsZMCcJJi2Oj99Uwz5fI9etnk5_3go_fGCbJe80CHvD7fmu4eK7zR5LRUNaddDk6FJMxsl83zXspAMuNuz4fn7K8kAq0tJCUm45ZwvPj8blbF3gxxHoTuaxUfaiMO03ZK3bat7YJnuWUzBWyKLUc_TE15l48Da7a2tUv8f5xXA8jK7pHWuWNezKnqlvBI5Bbj1BX9hnyWolsThMpguUZGwp3azk0RHc-25UwXU5DibK3i26vTyakR7DQbzmn7zGvqnMrH5PVSk1IVdk4ZBP5sUzTpn2aZYMk-8RRoDbyf-uUSQH-cRzU-ja6UnHqPFEtYyk8ojoe2KR0E9Vfh7ID-0gopl3DdLAGwUnwdcvSjdOuq67xzi6g9yUKLsoUFSvwGdU709URZ1ugLYxSghvtkWTCu0InVGxze149Ea52L57o-U2NbIor7O2owqmMbS12hHGrY7ilzGLr8jdMoCMZ-KsUA2iRZHb6LO8h6sJlCYzSu8Jr1kbrdJWU-WD9tQlsR2pARdy5E7UGVm3LO9sqx0Q4gRS6lPVhxjFV-k9eh=w380-h666-no?authuser=0" alt="Youtube Badge"/>
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-->
